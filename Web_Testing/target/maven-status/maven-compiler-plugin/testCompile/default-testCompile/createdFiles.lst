@@ -1,0 +1,7 @@
+starter/stepdefinitions/createBookStep.class
+starter/CucumberTestSuite.class
+starter/pages/editPage.class
+starter/stepdefinitions/BookViewStep.class
+starter/pages/createPage.class
+starter/stepdefinitions/editBookStep.class
+starter/pages/mainPage.class

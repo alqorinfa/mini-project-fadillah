@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: starter.CucumberTestSuite
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 100.041 s <<< FAILURE! - in starter.CucumberTestSuite
+Create book.As a user, I cannot create a book with invalid year  Time elapsed: 7.361 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+
+Edit Book.As a user, I cannot edit a book with invalid year  Time elapsed: 7.468 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+
