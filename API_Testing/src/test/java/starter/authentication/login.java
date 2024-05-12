@@ -38,7 +38,7 @@ public class login {
     @Step("I login with invalid email")
     public void LoginWithInvalidEmail() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "youmailcom");
+        requestBody.put("email", "youyoumailcom");
         requestBody.put("password", "magnetic");
 
         SerenityRest.given()
