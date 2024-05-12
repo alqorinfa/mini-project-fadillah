@@ -15,7 +15,7 @@ This repository hosts the codebase for a mini Quality Engineering (QE) project a
 - BDD Frameworks - Cucumber Test Suite, Serenity BDD
 
 ## Test Results
-- API Testing: 94% success rate with 29 test cases passing and 2 test cases failing. Failures occurred in the "register (invalid email)" and "create order (no quantity)" scenarios.
+- API Testing: 90% success rate with 28 test cases passing and 3 test cases failing. Failures occurred in the "register (invalid email)", "login (invalid email)" and "create order (no quantity)" scenarios.
 - Web Testing: 87% success rate with 10 test cases passing and 2 test cases failing. Failures occurred in the "create book (invalid year)" and "edit book (invalid year)" scenarios.
 - Mobile Testing: 100% success rate with a total of 13 test cases passing.
 
