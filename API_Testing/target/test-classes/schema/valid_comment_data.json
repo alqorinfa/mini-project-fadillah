@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "definitions": {
+    "ValidCommentData": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Datum" }
+        }
+      },
+      "required": ["data"],
+      "additionalProperties": false
+    },
+    "Datum": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Content": { "type": "string" },
+        "User": { "type": ["string", "null"] },
+        "Product": { "type": ["string", "null"] },
+        "Comment": { "type": ["string", "null"] }
+      },
+      "required": ["ID", "Content"]
+    }
+  },
+  "$ref": "#/definitions/ValidCommentData"
+}

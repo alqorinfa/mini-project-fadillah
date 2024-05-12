@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GetAllOrder",
+  "definitions": {
+    "GetAllOrder": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "title": "GetAllOrder"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Product": {
+          "$ref": "#/definitions/Product"
+        },
+        "Price": {
+          "type": "integer"
+        },
+        "Quantity": {
+          "type": "integer"
+        },
+        "Subtotal": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "Price",
+        "Product",
+        "Quantity",
+        "Subtotal"
+      ],
+      "title": "Datum"
+    },
+    "Product": {
+      "type": "string",
+      "enum": [
+        "Sony PS5"
+      ],
+      "title": "Product"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Get Category By Id" skipped="0" tests="2" time="0.06" timestamp="2024-05-12 11:54:08"><testcase name="As a user, I can get a category by id"/><testcase name="As a user, I cannot get a category by unexisted id"/></testsuite>

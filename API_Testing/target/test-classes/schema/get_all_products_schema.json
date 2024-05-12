@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/GetAllProducts",
+  "definitions": {
+    "GetAllProducts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "title": "GetAllProducts"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ID": {
+          "type": "integer"
+        },
+        "Name": {
+          "$ref": "#/definitions/DatumName"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Price": {
+          "type": "integer"
+        },
+        "Ratings": {
+          "type": "integer"
+        },
+        "Categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        }
+      },
+      "required": [
+        "Categories",
+        "Description",
+        "ID",
+        "Name",
+        "Price",
+        "Ratings"
+      ],
+      "title": "Datum"
+    },
+    "Category": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ID": {
+          "type": "integer"
+        },
+        "Name": {
+          "$ref": "#/definitions/CategoryName"
+        },
+        "Description": {
+          "$ref": "#/definitions/Description"
+        }
+      },
+      "required": [
+        "Description",
+        "ID",
+        "Name"
+      ],
+      "title": "Category"
+    },
+    "Description": {
+      "type": "string",
+      "enum": [
+        "for gaming purposes"
+      ],
+      "title": "Description"
+    },
+    "CategoryName": {
+      "type": "string",
+      "enum": [
+        "gaming"
+      ],
+      "title": "CategoryName"
+    },
+    "DatumName": {
+      "type": "string",
+      "enum": [
+        "Sony PS5",
+        "Apple iPhone 14 Pro",
+        "Sony PS7",
+        "Sony PS6",
+        "Hp Iphone",
+        "Hp Samsung",
+        "Add your name in the body",
+        "Ardel",
+        "Xlim pro"
+      ],
+      "title": "DatumName"
+    }
+  }
+}

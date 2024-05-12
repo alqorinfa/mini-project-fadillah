@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Register" skipped="0" tests="3" time="0.09" timestamp="2024-05-12 11:54:04"><testcase name="As a user, I can register with valid inputs"/><testcase name="As a user, I cannot register with invalid email"><failure message="1 expectation failed.&#10;JSON path error doesn't match.&#10;Expected: ERROR: invalid email&#10;  Actual: ERROR: duplicate key value violates unique constraint \&quot;users_email_key\&quot; (SQLSTATE 23505)&#10;" type="java.lang.AssertionError">1 expectation failed.
+JSON path error doesn't match.
+Expected: ERROR: invalid email
+  Actual: ERROR: duplicate key value violates unique constraint \"users_email_key\" (SQLSTATE 23505)
+</failure><system-err>1 expectation failed.
+JSON path error doesn't match.
+Expected: ERROR: invalid email
+  Actual: ERROR: duplicate key value violates unique constraint \"users_email_key\" (SQLSTATE 23505)
+
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+starter.authentication.register.lambda$errorMessageInvalidEmail$2(register.java:67)
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)
+starter.authentication.register.errorMessageInvalidEmail(register.java:66)
+starter.stepdefinitions.authentication.registerStep.errorMessageInvalidEmail(registerStep.java:35)
+</system-err></testcase><testcase name="As a user, I can register with empty inputs"/></testsuite>

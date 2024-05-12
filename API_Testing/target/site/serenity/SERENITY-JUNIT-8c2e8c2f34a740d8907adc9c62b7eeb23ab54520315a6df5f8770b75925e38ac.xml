@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Assign Rating" skipped="0" tests="3" time="0.11" timestamp="2024-05-12 11:54:11"><testcase name="As a user, i can assign rating for a product"/><testcase name="As a user, i cannot assign rating for unexisted product"/><testcase name="As a user, i can get a product rating"/></testsuite>
