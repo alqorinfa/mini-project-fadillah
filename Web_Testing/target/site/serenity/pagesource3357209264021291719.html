@@ -1,0 +1,1024 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta charset="UTF-8"&gt;<br/>
+  &lt;link rel="icon" type="image/svg+xml" href="/vite.svg"&gt;<br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/>
+  &lt;title&gt;Vite + React&lt;/title&gt;<br/>
+  &lt;script type="module" crossorigin="" src="/assets/index-DwcQhMsv.js"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="stylesheet" crossorigin="" href="/assets/index-DBRKiPkH.css"&gt;<br/>
+  &lt;style id="_goober"&gt; .go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}&lt;/style&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body&gt;<br/>
+  &lt;div id="root"&gt;<br/>
+   &lt;div class="p-4"&gt;<br/>
+    &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+     &lt;button class="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"&gt;Table&lt;/button&gt;&lt;button class="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"&gt;Card&lt;/button&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div class="flex justify-between items-center"&gt;<br/>
+     &lt;h1 class="text-3xl my-8"&gt;Books List&lt;/h1&gt;&lt;a href="/books/create"&gt;<br/>
+      &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-sky-800 text-4xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+       &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-8-2h2v-4h4v-2h-4V7h-2v4H7v2h4z"&gt;&lt;/path&gt;<br/>
+      &lt;/svg&gt;&lt;/a&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;table class="w-full border-separate border-spacing-2"&gt;<br/>
+     &lt;thead&gt;<br/>
+      &lt;tr&gt;<br/>
+       &lt;th class="border border-slate-600 rounded-md"&gt;No&lt;/th&gt;<br/>
+       &lt;th class="border border-slate-600 rounded-md"&gt;Title&lt;/th&gt;<br/>
+       &lt;th class="border border-slate-600 rounded-md max-md:hidden"&gt;Author&lt;/th&gt;<br/>
+       &lt;th class="border border-slate-600 rounded-md max-md:hidden"&gt;Publish Year&lt;/th&gt;<br/>
+       &lt;th class="border border-slate-600 rounded-md"&gt;Operations&lt;/th&gt;<br/>
+      &lt;/tr&gt;<br/>
+     &lt;/thead&gt;<br/>
+     &lt;tbody&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;1&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;JUDUL TELAH DI EDIT&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;AUTHOR TELAH DI EDIT&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;1234&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/663fc8e4330c3580016927bf"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/663fc8e4330c3580016927bf"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/663fc8e4330c3580016927bf"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;2&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;hihi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;jiji&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;-1&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66404b263d98eb4eed70b321"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66404b263d98eb4eed70b321"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66404b263d98eb4eed70b321"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;3&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;tets&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;test&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;1&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66404ca83d98eb4eed70b324"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66404ca83d98eb4eed70b324"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66404ca83d98eb4eed70b324"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;4&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Bentala Sella&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Akaigita&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2023&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66404d8e3d98eb4eed70b32c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66404d8e3d98eb4eed70b32c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66404d8e3d98eb4eed70b32c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;5&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Bentala Sella&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Akaigita&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66404dac3d98eb4eed70b336"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66404dac3d98eb4eed70b336"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66404dac3d98eb4eed70b336"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;6&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tohn Tohir&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;19999&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66406f7c76cbc7784f37cb3f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66406f7c76cbc7784f37cb3f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66406f7c76cbc7784f37cb3f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;7&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tohn Tohir&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;19999&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66406f8176cbc7784f37cb43"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66406f8176cbc7784f37cb43"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66406f8176cbc7784f37cb43"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;8&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;123&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2022&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66406f8676cbc7784f37cb47"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66406f8676cbc7784f37cb47"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66406f8676cbc7784f37cb47"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;9&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tohn Tohir&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;19999&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640710576cbc7784f37cb68"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640710576cbc7784f37cb68"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640710576cbc7784f37cb68"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;10&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tohn Tohir&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;19999&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640710a76cbc7784f37cb6c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640710a76cbc7784f37cb6c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640710a76cbc7784f37cb6c"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;11&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Java for Beginning&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;123&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2022&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640710f76cbc7784f37cb70"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640710f76cbc7784f37cb70"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640710f76cbc7784f37cb70"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;12&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;enchanted&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;taylor&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2010&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/664086aa3857aa0f1d4c9eb5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/664086aa3857aa0f1d4c9eb5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/664086aa3857aa0f1d4c9eb5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;13&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;LA&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;LA&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;99&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640b14d281a1910725c8b50"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640b14d281a1910725c8b50"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640b14d281a1910725c8b50"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;14&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640b215281a1910725c8b54"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640b215281a1910725c8b54"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640b215281a1910725c8b54"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;15&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2007&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640b7c34e573d5d4ad71166"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640b7c34e573d5d4ad71166"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640b7c34e573d5d4ad71166"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;16&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;-100&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640b7cf4e573d5d4ad7116a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640b7cf4e573d5d4ad7116a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640b7cf4e573d5d4ad7116a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;17&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2007&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640ba574e573d5d4ad7118f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640ba574e573d5d4ad7118f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640ba574e573d5d4ad7118f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;18&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;-100&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640ba614e573d5d4ad71193"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640ba614e573d5d4ad71193"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640ba614e573d5d4ad71193"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;19&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2007&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640bbc54e573d5d4ad711d1"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640bbc54e573d5d4ad711d1"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640bbc54e573d5d4ad711d1"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;20&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Avatar&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jokowi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;-100&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640bbce4e573d5d4ad711d5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640bbce4e573d5d4ad711d5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640bbce4e573d5d4ad711d5"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;21&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;jbinni&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;nini&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2002&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640bc834e573d5d4ad711f6"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640bc834e573d5d4ad711f6"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640bc834e573d5d4ad711f6"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;22&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Book19310816&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;984209@&amp;*360&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640fb32875b000cb2d76e72"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640fb32875b000cb2d76e72"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640fb32875b000cb2d76e72"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;23&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Anomali&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Elnov&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2020&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640fb34875b000cb2d76e75"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640fb34875b000cb2d76e75"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640fb34875b000cb2d76e75"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;24&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Book19310816&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;984209@&amp;*360&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6640fc45875b000cb2d76e8f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6640fc45875b000cb2d76e8f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6640fc45875b000cb2d76e8f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;25&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Book19310816&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;984209@&amp;*360&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66410b7d9cfe0d56027ed447"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66410b7d9cfe0d56027ed447"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66410b7d9cfe0d56027ed447"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;26&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Anomali&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Elnov&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2020&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66410b7f9cfe0d56027ed44a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66410b7f9cfe0d56027ed44a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66410b7f9cfe0d56027ed44a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;27&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;enchanted&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;taylor&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2010&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/664128e69603e9e14f3d8c59"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/664128e69603e9e14f3d8c59"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/664128e69603e9e14f3d8c59"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;28&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Book19310816&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;984209@&amp;*360&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/664136122c5f664dc31a9f65"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/664136122c5f664dc31a9f65"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/664136122c5f664dc31a9f65"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;29&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;enchanted&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;taylor&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2010&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641a757a964698da2b3b13b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641a757a964698da2b3b13b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641a757a964698da2b3b13b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;30&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Harry pottah&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jordan&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641b2ed36484fee0ea96048"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641b2ed36484fee0ea96048"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641b2ed36484fee0ea96048"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;31&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Pergi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tere liye&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2010&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641be3c1072b01ff3de5d7a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641be3c1072b01ff3de5d7a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641be3c1072b01ff3de5d7a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;32&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Pergi&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Tere liye&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2010&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641c0731072b01ff3de5d8b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641c0731072b01ff3de5d8b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641c0731072b01ff3de5d8b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;33&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Book19310816&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;984209@&amp;*360&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641c3341072b01ff3de5d9f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641c3341072b01ff3de5d9f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641c3341072b01ff3de5d9f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;34&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Anomali&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Elnov&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2020&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641c33a1072b01ff3de5da2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641c33a1072b01ff3de5da2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641c33a1072b01ff3de5da2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;35&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Tugas Akhir&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Irfan&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2012&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641c4d11072b01ff3de5db4"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641c4d11072b01ff3de5db4"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641c4d11072b01ff3de5db4"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;36&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Harry pottah&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Jordan&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641d9216ceaf4a16f6a5c4a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641d9216ceaf4a16f6a5c4a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641d9216ceaf4a16f6a5c4a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;37&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641e537ff2b05fe2bd7c688"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641e537ff2b05fe2bd7c688"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641e537ff2b05fe2bd7c688"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;38&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641e7daff2b05fe2bd7c6ab"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641e7daff2b05fe2bd7c6ab"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641e7daff2b05fe2bd7c6ab"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;39&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641e96dff2b05fe2bd7c6c9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641e96dff2b05fe2bd7c6c9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641e96dff2b05fe2bd7c6c9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;40&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641eac7ff2b05fe2bd7c6ea"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641eac7ff2b05fe2bd7c6ea"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641eac7ff2b05fe2bd7c6ea"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;41&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641ed6cff2b05fe2bd7c70b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641ed6cff2b05fe2bd7c70b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641ed6cff2b05fe2bd7c70b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;42&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f11bff2b05fe2bd7c73f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f11bff2b05fe2bd7c73f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f11bff2b05fe2bd7c73f"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;43&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f3b3ff2b05fe2bd7c75d"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f3b3ff2b05fe2bd7c75d"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f3b3ff2b05fe2bd7c75d"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;44&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f531ff2b05fe2bd7c77a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f531ff2b05fe2bd7c77a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f531ff2b05fe2bd7c77a"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;45&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f6dcff2b05fe2bd7c796"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f6dcff2b05fe2bd7c796"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f6dcff2b05fe2bd7c796"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;46&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f7a3ff2b05fe2bd7c7b2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f7a3ff2b05fe2bd7c7b2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f7a3ff2b05fe2bd7c7b2"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;47&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641f8cdff2b05fe2bd7c7ce"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641f8cdff2b05fe2bd7c7ce"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641f8cdff2b05fe2bd7c7ce"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;48&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641fa64ff2b05fe2bd7c7e9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641fa64ff2b05fe2bd7c7e9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641fa64ff2b05fe2bd7c7e9"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;49&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Kami Kos&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Daci&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2024&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/6641fd00ff2b05fe2bd7c801"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/6641fd00ff2b05fe2bd7c801"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/6641fd00ff2b05fe2bd7c801"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;50&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Bentala Sella&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Akaigita&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;2023&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66423cc3206a29256ed7a651"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66423cc3206a29256ed7a651"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66423cc3206a29256ed7a651"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+      &lt;tr class="h-8"&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;51&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center"&gt;Bentala Sella&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;Akaigita&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;0&lt;/td&gt;<br/>
+       &lt;td class="border border-slate-700 rounded-md text-center max-md:hidden"&gt;<br/>
+        &lt;div class="flex justify-center gap-x-4"&gt;<br/>
+         &lt;a href="/books/details/66423cdc206a29256ed7a65b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 16 16" class="text-2xl text-green-800" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"&gt;&lt;/path&gt;&lt;path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/edit/66423cdc206a29256ed7a65b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" class="text-2xl text-yellow-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;&lt;a href="/books/delete/66423cdc206a29256ed7a65b"&gt;<br/>
+          &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" class="text-2xl text-red-600" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+           &lt;path fill="none" d="M0 0h24v24H0V0z"&gt;&lt;/path&gt;&lt;path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"&gt;&lt;/path&gt;<br/>
+          &lt;/svg&gt;&lt;/a&gt;<br/>
+        &lt;/div&gt;&lt;/td&gt;<br/>
+      &lt;/tr&gt;<br/>
+     &lt;/tbody&gt;<br/>
+    &lt;/table&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div class="notistack-SnackbarContainer go1453831412 go4027089540 go1141946668"&gt;<br/>
+    &lt;div class="go1475592160 go1671063245" style="pointer-events: all; overflow: visible; min-height: 0px; transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"&gt;<br/>
+     &lt;div class="notistack-CollapseWrapper" style="display: flex; width: 100%;"&gt;<br/>
+      &lt;div class="notistack-Snackbar go3963613292"&gt;<br/>
+       &lt;div class="go1888806478 notistack-MuiContent notistack-MuiContent-success go167266335 go1725278324 go3162094071" role="alert" aria-describedby="notistack-snackbar" style="transform: none; transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;"&gt;<br/>
+        &lt;div id="notistack-snackbar" class="go946087465"&gt;<br/>
+         &lt;svg viewbox="0 0 24 24" focusable="false" style="font-size: 20px; margin-inline-end: 8px; user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0;"&gt;<br/>
+          &lt;path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41<br/>
+        10.59L10 14.17L17.59 6.58L19 8L10 17Z"&gt;&lt;/path&gt;<br/>
+         &lt;/svg&gt;Book created successfully<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/GetAllProducts",
+  "$ref": "#/definitions/GetAllOrder",
   "definitions": {
-    "GetAllProducts": {
+    "GetAllOrder": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -16,7 +16,7 @@
       "required": [
         "data"
       ],
-      "title": "GetAllProducts"
+      "title": "GetAllOrder"
     },
     "Datum": {
       "type": "object",
@@ -100,7 +100,11 @@
         "Hp Samsung",
         "Add your name in the body",
         "Ardel",
-        "Xlim pro"
+        "Xlim pro",
+        "Botie",
+        "COBA",
+        "Sambal Bawang",
+        "Xlim pro 2"
       ],
       "title": "DatumName"
     }

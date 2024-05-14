@@ -4,11 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import starter.authentication.login;
+import starter.authentication.Login;
 
 public class LoginStep {
     @Steps
-    login login;
+    Login login;
 
     @Given("I set API endpoint for login")
     public void setAPIEndpointForLogin() {

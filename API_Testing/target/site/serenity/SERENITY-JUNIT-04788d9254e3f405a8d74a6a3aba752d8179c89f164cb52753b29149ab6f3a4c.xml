@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login" skipped="0" tests="5" time="2.83" timestamp="2024-05-12 08:28:17"><testcase name="As a user, I can login with valid credentials"/><testcase name="As a user, I cannot login with invalid email"><failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login" skipped="0" tests="5" time="1.03" timestamp="2024-05-13 11:14:02"><testcase name="As a user, I can login with valid credentials"/><testcase name="As a user, I cannot login with invalid email"><failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
 Expected status code &lt;400&gt; but was &lt;200&gt;.
 </failure><system-err>1 expectation failed.
 Expected status code &lt;400&gt; but was &lt;200&gt;.

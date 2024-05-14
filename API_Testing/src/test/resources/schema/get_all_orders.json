@@ -1,54 +1,64 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/GetAllOrder",
-  "definitions": {
-    "GetAllOrder": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Datum"
-          }
-        }
-      },
-      "required": [
-        "data"
-      ],
-      "title": "GetAllOrder"
+  "data": [
+    {
+      "Product": "Ardel",
+      "Price": 0,
+      "Quantity": 1,
+      "Subtotal": 0
     },
-    "Datum": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "Product": {
-          "$ref": "#/definitions/Product"
-        },
-        "Price": {
-          "type": "integer"
-        },
-        "Quantity": {
-          "type": "integer"
-        },
-        "Subtotal": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "Price",
-        "Product",
-        "Quantity",
-        "Subtotal"
-      ],
-      "title": "Datum"
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
     },
-    "Product": {
-      "type": "string",
-      "enum": [
-        "Sony PS5"
-      ],
-      "title": "Product"
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
+    },
+    {
+      "Product": "Apple iPhone 14 Pro",
+      "Price": 999,
+      "Quantity": 1,
+      "Subtotal": 999
     }
-  }
+  ]
 }
