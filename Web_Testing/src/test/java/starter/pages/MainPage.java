@@ -4,7 +4,7 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class mainPage extends PageObject {
+public class MainPage extends PageObject {
     private By tableButton() {
         return By.xpath("//*[@id=\"root\"]/div/div[1]/button[1]");
     }

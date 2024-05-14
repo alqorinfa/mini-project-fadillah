@@ -5,13 +5,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.jupiter.api.Assertions;
-import starter.pages.editPage;
-import starter.pages.mainPage;
+import starter.pages.EditPage;
+import starter.pages.MainPage;
 
-public class editBookStep {
+public class EditBookStep {
     @Steps
-    mainPage mainPage;
-    editPage editPage;
+    MainPage mainPage;
+    EditPage editPage;
 
     @When("I click edit icon")
     public void clickEditIcon(){

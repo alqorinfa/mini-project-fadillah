@@ -4,11 +4,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import starter.pages.mainPage;
+import starter.pages.MainPage;
 
 public class BookViewStep {
     @Steps
-    mainPage mainPage;
+    MainPage mainPage;
 
     @Given("I am on the main page")
     public void onTheMainPage() {

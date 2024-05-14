@@ -4,7 +4,7 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class createPage extends PageObject {
+public class CreatePage extends PageObject {
     private By onCreatePage() {return By.xpath("//*[@id=\"root\"]/div/h1");}
 
     private By plusButton() {return By.xpath("//*[@id=\"root\"]/div/div[2]/a");}

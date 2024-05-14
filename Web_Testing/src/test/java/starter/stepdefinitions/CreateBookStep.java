@@ -5,11 +5,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.jupiter.api.Assertions;
-import starter.pages.createPage;
+import starter.pages.CreatePage;
 
-public class createBookStep {
+public class CreateBookStep {
     @Steps
-    createPage createPage;
+    CreatePage createPage;
 
     @When("I click plus button")
     public void clickPlusButton() {

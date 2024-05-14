@@ -4,7 +4,7 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class editPage extends PageObject {
+public class EditPage extends PageObject {
     private By onEditPage() {
         return By.xpath("//*[@id=\"root\"]/div/h1");
     }
